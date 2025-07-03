@@ -24,7 +24,6 @@ This is a simple **Python-based console application** that allows users to calcu
 - Users are asked to select a shape by typing the **first letter** (e.g., `R` for Rectangle).
 - After selection, the user enters the necessary dimensions.
 - The program calculates and displays the **area rounded to 2 decimal places**.
-
 ---
 
 ## 🧮 Supported Formulas
