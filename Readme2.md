@@ -24,3 +24,15 @@ This is a simple text-based quiz game built in Python. The player is given clues
 
 ## ✅ Sample Output
 
+--------------------------------------------------------------------
+Welcome To Guess the Cricketer 
+| There are 6 Letter in His Name | 
+1.  | Nation =  Pakistan    | Role = Wicket Keeper | : Farhan
+---------------------------------------
+✅ Correct Answer !!
+----------------------------------------
+| There are 4 Letter in His Name | 
+2.  | Nation =    India     | Role =     Opener    | : gll
+---------------------------------------   
+|❌ Wrong Answer | Correct Answer is gill  
+------------------------------------------
