@@ -252,7 +252,7 @@ for player in selected:
     elif sel == "sixes":
       Six.append(player.sixes)  
       item.append(player.sixes)     
-    elif sel == "four":
+    elif sel == "fours":
       item.append(player.four)
       Four.append(player.four)  
 
@@ -333,56 +333,56 @@ print(item1)
 for a in item :
   #------------------------------------| batting |---------------------------------------------
   if a in Sr:
-    if a>120:
+    if a>130 :
       s = a*3
-    else :  
+    else:  
       s= a*2
     score1.append(s) 
   elif  a in Run:
-    r = a
+    r = a/2
     score1.append(r)
   elif a in Six:
-    if a>30 and a<=39:
+    if a>70 and a<=95:
       si = a*3
-    elif a>40 and a<=49:  
+    elif a>96 and a<=130:  
       si= a*4
-    elif a>50:
+    elif a>131:
       si= a*5
     else:
       si= a*2 
     score1.append(si)  
   elif a in Four:
-    if a>60 and a<=80:
+    if a>80 and a<=95:
        f = a*3
-    elif a>81 and a<=95:  
-      f= a*4
-    elif a>96:
-      f =a*5
+    elif a>96 and a<=115:  
+       f= a*4
+    elif a>116:
+       f =a*5
     else :
-      f=a*2  
+       f=a*2  
     score1.append(f)        
-        #---------------------------| bowling |------------------------
+  #---------------------------| bowling |------------------------
   elif a in Eco:
-    if a > 8 :
-      e = 100
+    if a == 8 :
+      e = 200
+    elif a == 7:
+      e = 300
     else:
-      e = 200     
+      e = 400       
     score1.append(e) 
   elif a in Wicket:
-    if a>50 and a<=65:
+    if a>69 and a<=80:
       w = a*2
-    elif a>66 and a<=80:  
+    elif a>81 and a<=100:  
       w= a*3
     else:
       w= a*4 
     score1.append(w)  
   elif a in Avg:
-    if a>21:
-       av = 100
-    elif a>20:  
-      av = 200
+    if a>19 and a<=22:
+       av = 200
     else :
-      av =300 
+      av =400 
     score1.append(av)
       #---------------------------------| keeping |-------------------------------------
   elif a in Stump:
@@ -401,52 +401,53 @@ for b in item1 :
       s1= b*2
     score2.append(s1) 
   elif  b in Run1:
-    r1 = b
+    r1 = b/2
     score2.append(r1)
   elif b in Six1:
-    if b>30 and b<=39:
-      si1 = b*3
-    elif b>40 and b<=49:  
-      si1 = b*4
-    elif b>50:
-      si1 = b*5
+    if a>70 and a<=95:
+      si1 = a*3
+    elif a>96 and a<=130:  
+      si1= a*4
+    elif a>131:
+      si1= a*5
     else:
-      si1 = b*2 
+      si1= a*2 
     score2.append(si1)  
   elif b in Four1:
-    if b>60 and b<=80:
-       f1 = b*3
-    elif b>81 and b<=95:  
-      f1= b*4
-    elif b>96:
-      f1 =b*5
-    else :
-      f1=b*2  
-    score2.append(f1)        
-        #---------------------------| bowling |------------------------
+     if a>80 and a<=95:
+       f1 = a*3
+     elif a>96 and a<=115:  
+       f1= a*4
+     elif a>116:
+       f1 =a*5
+     else :
+       f1=a*2  
+     score2.append(f1)        
+  #---------------------------| bowling |------------------------
   elif b in Eco1:
-    if b > 8 :
-      e1 = 100
-    else:
-      e1 = 200     
+    if b == 8 :
+      e1 = 200
+    elif b == 7:
+      e1 = 300
+    else :
+      e1 = 400       
     score2.append(e1) 
   elif b in Wicket1:
-    if b>50 and b<=65:
-      w1 = b*2
-    elif b>66 and b<=80:  
-      w1 = b*3
+    if a>69 and a<=80:
+      w1 = a*2
+    elif a>81 and a<=100:  
+      w1= a*3
     else:
-      w1 = b*4 
+      w1= a*4 
+    score1.append(w)  
     score2.append(w1)  
   elif b in Avg1:
-    if b>21:
-       av1 = 100
-    elif b>20:  
-      av1 = 200
+    if a>19 and a<=22:
+       av1 = 200
     else :
-      av1 =300 
+      av1 =400 
     score2.append(av1)
-      #---------------------------------| keeping |-------------------------------------
+  #---------------------------------| keeping |-------------------------------------
   elif b in Stump1:
      st1 = b*4     
      score2.append(st1) 
@@ -462,9 +463,6 @@ print(score1)
 print(score2)
 
 time.sleep(5)
-
-print(play1)
-print(play2)
 
 if play1>play2 :
    print("---------------------------------------------")
@@ -483,4 +481,4 @@ elif play2>play1 :
    print("---------------------------------------------")
    print("Player Two Is the Winner ")   
 
-time.sleep(10)   
+time.sleep(5)  
